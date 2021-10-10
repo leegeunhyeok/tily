@@ -2933,6 +2933,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.7.13":
+  version: 5.7.13
+  resolution: "lottie-web@npm:5.7.13"
+  checksum: 1b26e88d0e12df10afed9f5c686887ddb30b5cc8ca9d4268b1b0ddc78a794d6d6d7cc8573a87ab51c9d9bd60ac493582b1d002586425df4e5d9c638c682e3c01
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^6.0.0":
   version: 6.0.0
   resolution: "lru-cache@npm:6.0.0"
@@ -4723,6 +4730,7 @@ resolve@^2.0.0-next.3:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
+    lottie-web: ^5.7.13
     next: 11.1.2
     react: 17.0.2
     react-dom: 17.0.2
