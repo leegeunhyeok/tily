@@ -1,7 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import { useAuthMachine, useAuthRouter } from '~/hooks';
+
 const Home: NextPage = () => {
+  const { service } = useAuthMachine();
+
+  useAuthRouter('notAuthorized', '/login');
+
+  const handleClickLogoutButton = () => {
+    service.send('LOGOUT');
+  };
+
   return (
     <div>
       <Head>
@@ -10,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Main
+        <button onClick={handleClickLogoutButton}>Logout</button>
       </main>
     </div>
   );
