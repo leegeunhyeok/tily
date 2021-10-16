@@ -23,6 +23,8 @@
           "ignoreRestSiblings": true
         }],
         "semi": "error",
+        "comma-dangle": ["error", "only-multiline"],
+        "no-trailing-spaces": "error",
         "quotes": ["error", "single"],
         "quote-props": ["error", "as-needed"]
       }
