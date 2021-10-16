@@ -1,35 +1,24 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
+import type { AppProps } from 'next/app';
+import { initializeApp } from 'firebase/app';
+import { AuthMachineProvider } from '~/machines/authMachine';
 
-import { signIn } from '~/services/authentication';
-import { useAuthRouter } from '~/hooks';
-import { useContext } from 'react';
-import { AuthMachineContext } from '~/machines/authMachine';
-import { useActor } from '@xstate/react';
+initializeApp({
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KET,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+});
 
-const Login: NextPage = () => {
-  const context = useContext(AuthMachineContext);
-  const [_, send] = useActor(context.service);
-
-  useAuthRouter('authorized', '/');
-
-  const handleClickLoginButton = () => {
-    signIn()
-      .then((token) => send('LOGIN', { token }))
-      .catch((error) => alert(error?.message));
-  };
-
+function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
-      <Head>
-        <title>Tily - Login</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <button onClick={handleClickLoginButton}>Login</button>
-      </main>
-    </div>
+    <AuthMachineProvider>
+      <Component {...pageProps} />
+    </AuthMachineProvider>
   );
-};
+}
 
-export default Login;
+export default App;
