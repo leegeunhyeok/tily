@@ -16,7 +16,10 @@ initializeApp({
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 });
 
-const StyledPage = styled(Box);
+const StyledPage = styled(Box, {
+  width: '100%',
+  height: '100%',
+});
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -39,9 +42,11 @@ function App({ Component, pageProps }: AppProps) {
             outline: none;
           }
 
-          html, body {
+          html, body, #__next {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
           }
 
           ::placeholder,
