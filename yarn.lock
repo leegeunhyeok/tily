@@ -5772,10 +5772,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-react@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "lottie-react@npm:2.1.0"
+  dependencies:
+    lottie-web: ^5.7.3
+  peerDependencies:
+    prop-types: ^15.5.7
+    react: ^16.8.0
+    react-dom: ^16.8.0
+  checksum: 7cfd65bc96f0c68e87bb006ac73234f4afe0cfcd8a215cd5e4bb943356499a300d3ea517de1fb2cb5bd20ed5d5edd090787b13751433aa1f16a3da6e93a685ee
+  languageName: node
+  linkType: hard
+
 "lottie-web@npm:^5.7.13":
   version: 5.7.13
   resolution: "lottie-web@npm:5.7.13"
   checksum: 1b26e88d0e12df10afed9f5c686887ddb30b5cc8ca9d4268b1b0ddc78a794d6d6d7cc8573a87ab51c9d9bd60ac493582b1d002586425df4e5d9c638c682e3c01
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.7.3":
+  version: 5.7.14
+  resolution: "lottie-web@npm:5.7.14"
+  checksum: 4e373ba9b05e9b5b3d09f59c0d4b21d53b0f2a2871cac990c6e650897c5473351f9f9f2483849e6f29f337937ad323a1f2a405aa8bde16fe6fed446296d867c4
   languageName: node
   linkType: hard
 
@@ -8030,6 +8050,7 @@ resolve@^2.0.0-next.3:
     eslint-plugin-react-hooks: ^4.2.0
     firebase: ^9.1.2
     jest: ^27.2.5
+    lottie-react: ^2.1.0
     lottie-web: ^5.7.13
     next: 11.1.2
     react: 17.0.2
