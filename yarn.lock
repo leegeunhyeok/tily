@@ -69,7 +69,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
   version: 7.15.4
   resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
@@ -894,6 +894,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-polymorphic@npm:^0.0.14":
+  version: 0.0.14
+  resolution: "@radix-ui/react-polymorphic@npm:0.0.14"
+  peerDependencies:
+    react: ^16.8 || ^17.0
+  checksum: 942344b369257e8528d230d00f3a797ac348eb1aa502738045f8500ff0da48191e8b95b0e3fa04072c0eba5ab3956625eeafcade2a4e6b206749e9c83988d316
+  languageName: node
+  linkType: hard
+
 "@rushstack/eslint-patch@npm:^1.0.6":
   version: 1.0.7
   resolution: "@rushstack/eslint-patch@npm:1.0.7"
@@ -949,6 +958,26 @@ __metadata:
   version: 15.7.4
   resolution: "@types/prop-types@npm:15.7.4"
   checksum: ef6e1899e59b876c273811b1bd845022fc66d5a3d11cb38a25b6c566b30514ae38fe20a40f67622f362a4f4f7f9224e22d8da101cff3d6e97e11d7b4c307cfc1
+  languageName: node
+  linkType: hard
+
+"@types/react-transition-group@npm:^4.4.3":
+  version: 4.4.3
+  resolution: "@types/react-transition-group@npm:4.4.3"
+  dependencies:
+    "@types/react": "*"
+  checksum: 7e45c6bf50cdfdc482d9ce4c302cda65134b3a44306c749d46d2f3256ca8c95cbbc1cbe28c32010b9273f5db78c8d434a8cea3688ac6e5327443b8a8d1c1caac
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*":
+  version: 17.0.30
+  resolution: "@types/react@npm:17.0.30"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: e3aaac1b8fda6e3622b75db0bd7d8dc412c2f2b77a00afdd32cae8c71fb0b1ca6926ab1fbe1c536dd51d96c0ba372738993837a8df1637637aaab7b86e421b7f
   languageName: node
   linkType: hard
 
@@ -2061,6 +2090,16 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"dom-helpers@npm:^5.0.1":
+  version: 5.2.1
+  resolution: "dom-helpers@npm:5.2.1"
+  dependencies:
+    "@babel/runtime": ^7.8.7
+    csstype: ^3.0.2
+  checksum: 863ba9e086f7093df3376b43e74ce4422571d404fc9828bf2c56140963d5edf0e56160f9b2f3bb61b282c07f8fc8134f023c98fd684bddcb12daf7b0f14d951c
   languageName: node
   linkType: hard
 
@@ -4577,7 +4616,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -4746,6 +4785,21 @@ fsevents@~2.3.1:
   version: 0.8.3
   resolution: "react-refresh@npm:0.8.3"
   checksum: 3cffe5a9cbac1c5d59bf74bf9fff43c987d87ef32098b9092ea94b6637377d86c08565b9374d9397f446b3fbcd95de986ec77220a16f979687cb39b7b89e2f91
+  languageName: node
+  linkType: hard
+
+"react-transition-group@npm:^4.4.2":
+  version: 4.4.2
+  resolution: "react-transition-group@npm:4.4.2"
+  dependencies:
+    "@babel/runtime": ^7.5.5
+    dom-helpers: ^5.0.1
+    loose-envify: ^1.4.0
+    prop-types: ^15.6.2
+  peerDependencies:
+    react: ">=16.6.0"
+    react-dom: ">=16.6.0"
+  checksum: b67bf5b3e86dbab72d658b9a52a3589e5960583ab28c7c66272427d8fe30d4c7de422d5046ae96bd2683cdf80cc3264b2516f5ce80cae1dbe6cf3ca6dda392c5
   languageName: node
   linkType: hard
 
@@ -5544,8 +5598,10 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "tily@workspace:."
   dependencies:
+    "@radix-ui/react-polymorphic": ^0.0.14
     "@stitches/react": ^1.2.5
     "@types/react": 17.0.27
+    "@types/react-transition-group": ^4.4.3
     "@typescript-eslint/eslint-plugin": ^4.33.0
     "@typescript-eslint/parser": ^4.33.0
     "@xstate/react": ^1.6.1
@@ -5560,6 +5616,7 @@ resolve@^2.0.0-next.3:
     next: 11.1.2
     react: 17.0.2
     react-dom: 17.0.2
+    react-transition-group: ^4.4.2
     typescript: 4.4.3
     xstate: ^4.25.0
   languageName: unknown
