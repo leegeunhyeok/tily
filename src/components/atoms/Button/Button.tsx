@@ -13,7 +13,6 @@ type ButtonComponent = Polymorphic.ForwardRefComponent<
 >;
 
 const StyledButton = styled(DEFAULT_TAG, {
-  display: 'inline',
   boxSizing: 'border-box',
   border: 'none',
   borderRadius: '$default',
