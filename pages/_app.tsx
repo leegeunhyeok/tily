@@ -30,6 +30,10 @@ function App({ Component, pageProps }: AppProps) {
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
             rel="stylesheet"
           />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/vs2015.min.css"
+            rel="stylesheet"
+          />
         </Head>
         <style jsx global>{
           `* {
@@ -42,6 +46,10 @@ function App({ Component, pageProps }: AppProps) {
             outline: none;
           }
 
+          html {
+            font-size: 16px;
+          }
+
           html, body, #__next {
             margin: 0;
             padding: 0;
@@ -49,10 +57,22 @@ function App({ Component, pageProps }: AppProps) {
             height: 100%;
           }
 
+          code * {
+            font-family: monospace;
+          }
+
           ::placeholder,
           :-ms-input-placeholder {
             color: #757575;
             opacity: 1;
+          }
+
+          p.is-editor-empty:first-child::before {
+            content: attr(data-placeholder);
+            float: left;
+            color: #757575;
+            pointer-events: none;
+            height: 0;
           }`
         }
         </style>

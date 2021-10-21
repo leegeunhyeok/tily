@@ -4,15 +4,7 @@ import { styled } from '~/stitches.config';
 import { useTouch } from '~/hooks';
 
 const DEFAULT_TAG = 'input';
-
-export type InputProps = React.ComponentProps<typeof StyledInput>;
-
-type InputComponent = Polymorphic.ForwardRefComponent<
-  typeof DEFAULT_TAG,
-  InputProps
->;
-
-const StyledInput = styled(DEFAULT_TAG, {
+export const INPUT_STYLE = {
   display: 'block',
   boxSizing: 'border-box',
   width: '100%',
@@ -25,6 +17,17 @@ const StyledInput = styled(DEFAULT_TAG, {
   '&:focus': {
     backgroundColor: '$grey-100',
   },
+} as const;
+
+export type InputProps = React.ComponentProps<typeof StyledInput>;
+
+type InputComponent = Polymorphic.ForwardRefComponent<
+  typeof DEFAULT_TAG,
+  InputProps
+>;
+
+const StyledInput = styled(DEFAULT_TAG, {
+  ...INPUT_STYLE,
   variants: {
     active: {
       true: {
